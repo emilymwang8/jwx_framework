@@ -20,6 +20,11 @@
                     登录
                 </button>
             </form>
+            <div class="author">
+                <p></p>
+                <span>作者：0x584A</span>
+                <span><a href="http://jgeek.cn">博客地址:Jgeek.cn</a></span>
+            </div>
         </div>
         <div style="text-align:center;">
         </div>
