@@ -6,6 +6,10 @@
 
 > 当配置好后请删除`install`目录中的`install.php`文件。
 
+请将`Library/smarty/templates_c`文件夹权限设置成可读写权限。
+
+请安装[【SeasLog日志插件】 获取地址：https://github.com/Neeke/SeasLog](https://github.com/Neeke/SeasLog)
+
 #### 目录结构
 
 ```
@@ -20,6 +24,7 @@
 ├── Model       // 数据库Model操作文件
 ├── Public      // 公共资源文件
 ├── View        // 视图文件
+├── SqlData     // 初始建库SQL语句
 ├── index.php
 └── README.md
 

@@ -14,7 +14,7 @@ return array(
         // 数据库用户名
         'user'    => 'root',
         // 数据库密码
-        'paw'     => 'root',
+        'pass'     => 'root',
         // 编码
         'charset' => 'utf8',
         // 表前缀

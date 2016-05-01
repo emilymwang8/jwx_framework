@@ -26,7 +26,7 @@ class Jwx
         self::setInclude();
         self::setAutoLoad();
         self::setUrl();
-        self::setPrivilege();
+        // self::setPrivilege();
         self::setDispatch();
     }
 
@@ -101,7 +101,19 @@ class Jwx
      */
     private static function setInclude(){
         // 模板引擎
+        // templates目录地址
+        define('TEMPLATES_DIR', LIBRARY_DIR.'/smarty/templates/');
+        // templates_c目录地址
+        define('TEMPLATES_C_DIR', LIBRARY_DIR.'/smarty/templates_c/');
+        // cache目录地址
+        define('CACHE_DIR', LIBRARY_DIR.'/smarty/cache/');
         include LIBRARY_DIR.'/smarty/Smarty.class.php';
+
+        // 加载公用方法函数
+        include COMMON_DIR.'/function.php';
+
+        // 加载XSS过滤库
+        include LIBRARY_DIR.'/htmlpurifier/HTMLPurifier.php';
     }
 
 

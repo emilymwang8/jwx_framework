@@ -4,6 +4,41 @@
  */
 
 /**
+ * 验证及过滤表单数据
+ * @param  array  $Data 用户提交的数据
+ * @param  stiring  $Type 数据过滤模式
+ * @return array
+ */
+function is_from($Data, $Type = 'SQL')
+{
+    if (empty($Data)) {
+        return false;
+    }
+
+    $tempArray = [];
+
+    switch ($Type) {
+        case 'XSS': // 过滤xss
+            $HTMLPurifier = new HTMLPurifier;
+
+            foreach ($Data as $k => $v) {
+                $tempArray[$k] = $HTMLPurifier->purify($v);
+            }
+            return $tempArray;
+            break;
+        case 'SQL':
+            foreach ($Data as $k => $v) {
+                $tempArray[$k] = htmlspecialchars($v, ENT_QUOTES);
+            }
+            return $tempArray;
+            break;
+        default:
+            exit('数据过滤类型错误！');
+            break;
+    }
+}
+
+/**
  * 创建文件夹
  * @param  string $dir   路径
  * @param  int $chmod 权限

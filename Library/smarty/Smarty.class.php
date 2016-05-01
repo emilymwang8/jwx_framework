@@ -290,7 +290,7 @@ class Smarty extends Smarty_Internal_TemplateBase
      *
      * @var array
      */
-    protected $template_dir = array('./templates/');
+    protected $template_dir = array(TEMPLATES_DIR);
 
     /**
      * joined template directory string used in cache keys
@@ -332,7 +332,7 @@ class Smarty extends Smarty_Internal_TemplateBase
      *
      * @var string
      */
-    protected $compile_dir = './templates_c/';
+    protected $compile_dir = TEMPLATES_C_DIR;
 
     /**
      * plugins directory
@@ -346,7 +346,7 @@ class Smarty extends Smarty_Internal_TemplateBase
      *
      * @var string
      */
-    protected $cache_dir = './cache/';
+    protected $cache_dir = CACHE_DIR;
 
     /**
      * config directory
