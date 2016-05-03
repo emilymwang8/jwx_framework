@@ -10,4 +10,7 @@ class MainController extends Controller
         // 显示模板页面
         $this->view->display('Main/index.tpl');
     }
+
+    // 显示模板头
+    // 显示模板尾
 }
